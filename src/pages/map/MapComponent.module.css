@@ -1,0 +1,36 @@
+/* MapComponent.module.css */
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Высота карты на всю высоту экрана */
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-div-icon-red {
+  filter: hue-rotate(-100deg) brightness(1.2); /* Настройте эти значения для достижения нужного красного цвета */
+}
+
+.leaflet-div-icon-green {
+  filter: hue-rotate(100deg) brightness(1.2); /* Настройте эти значения для достижения нужного зеленого цвета */
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 100%;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animatedPolyline {
+  stroke: blue;
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 5, 5;
+  animation: dash 1s linear infinite;
+}

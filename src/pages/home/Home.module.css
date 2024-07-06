@@ -1,0 +1,39 @@
+/* Home.css */
+.home-container {
+    position: relative;
+    height: 100vh;
+    background-image: url('./home_background.jpg'); 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Черная наложение с 50% непрозрачностью */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-container {
+    margin-top: -10%; /* Отрицательный отступ сверху, чтобы поднять текст выше */
+    text-align: center;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 300;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-top: 10px; /* Добавим небольшой отступ между заголовком и текстом */
+    font-weight: 300;
+    color: white;
+  }

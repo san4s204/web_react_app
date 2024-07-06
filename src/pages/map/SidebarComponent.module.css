@@ -1,0 +1,125 @@
+:root {
+  --sidebar-width: 450px;
+  --sidebar-toggle-offset: 0px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100%;
+  background: linear-gradient(135deg, #434343 30%, #2c2c2c);
+  opacity: 0.95;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+  font-family: 'Arial', sans-serif;
+  color: #f1f1f1;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar.closed {
+  transform: translateX(calc(-1 * var(--sidebar-width)));
+}
+
+.sidebarContent {
+  padding: 20px;
+}
+
+.sidebarToggle {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--sidebar-width) + var(--sidebar-toggle-offset));
+  transform: translateY(-50%);
+  height: 90px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 1001;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar.closed ~ .sidebarToggle {
+  left: var(--sidebar-toggle-offset);
+}
+
+.sidebarToggle:hover {
+  background-color: #0056b3;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+.section p {
+  margin: 10px 0;
+}
+
+.lineSeparator {
+  height: 1px;
+  background-color: #fdfeff;
+  margin: 20px 0;
+}
+
+.exampleButton {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.exampleButton:hover {
+  background-color: #0056b3;
+}
+
+.exampleInput {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.exampleSelect {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.fetchBeaconsButton {
+  display: block;
+  margin: 10px auto; /* Center the button */
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  width: fit-content; /* Adjust the width to fit the content */
+}
+
+.fetchBeaconsButton:hover {
+  background-color: #218838;
+}
